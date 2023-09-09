@@ -1,6 +1,6 @@
 {
   "name": "image-stylize",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "Image Stylize Library is a TypeScript library for image processing and filter effects.",
   "main": "index.ts",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WenyueLike/StyLize.git"
+    "url": "git+https://github.com/ccCaowenyue/ImageStyLize.git"
   },
   "keywords": [
     "stylize",
@@ -23,7 +23,7 @@
   "author": "norvan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WenyueLike/StyLize/issues"
+    "url": "https://github.com/ccCaowenyue/ImageStyLize/issues"
   },
-  "homepage": "https://github.com/WenyueLike/StyLize#readme"
+  "homepage": "https://github.com/ccCaowenyue/ImageStyLize#readme"
 }

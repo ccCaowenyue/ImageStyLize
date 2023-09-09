@@ -1,4 +1,10 @@
-export type TEffectType = 'blur' | 'texty' | 'grayscale' | 'leca';
+export type TEffectType =
+  | "blur"
+  | "texty"
+  | "grayscale"
+  | "leca"
+  | "pixel"
+  | "oil";
 /** Canvas init params */
 export type TStylize = {
   width: number;
@@ -43,9 +49,35 @@ export type TLecaConfig = {
   url: string;
 };
 
+/** Pixel init params */
+export type TPixelConfig = {
+  /** image url */
+  url: string;
+  /** blur radius */
+  radius: number;
+  /** pixel average */
+  avarage: number;
+};
+
+/** Oil painting init params */
+export type TOilPaintint = {
+  /** image url */
+  url: string;
+  /** oil paintint radius */
+  radius: number;
+  /** oil paintint intensity */
+  intensity: number;
+};
+
 /** Effect init params */
 export type TEffectConfig = {
   type: TEffectType;
   /** Gaussian blur init params */
-  data: TGaussianBlurConfig | TTextyConfig | TGrayScaleConfig | TLecaConfig;
+  data:
+    | TGaussianBlurConfig
+    | TTextyConfig
+    | TGrayScaleConfig
+    | TLecaConfig
+    | TPixelConfig
+    | TOilPaintint;
 };

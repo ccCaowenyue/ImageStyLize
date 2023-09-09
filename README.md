@@ -9,13 +9,15 @@ Image Stylize Library is a JavaScript/TypeScript library for image processing an
 - Convert images to black and white.
 - Simulate the Leica camera filter effect.
 - Convert image to text drawing
+- Convert Image to Pixel Art Style
+- Convert Image to Oil Painting Style
 
 ## Installation
 
 You can install My Custom Library using npm:
 
 ```bash
-npm install my-custom-library
+npm install image-stylize
 ```
 
 ## Usage
@@ -89,6 +91,35 @@ Convert image to text drawing
 ```
 
 ![Alt text](image-3.png)
+
+Convert Image to Pixel Art Style
+
+```js
+ stylize.draw({
+      type: "pixel",
+      data: {
+        url: "/src/assets/a.jpg",
+        avarage: 10,
+      },
+    });
+```
+
+Convert Image to Oil Painting Style
+
+![Alt text](image-4.png)
+
+```js
+ stylize.draw({
+      type: "oil",
+      data: {
+        url: "/src/assets/a.jpg",
+        radius: 4,
+        intensity: 255,
+      },
+    });
+```
+
+![Alt text](image-5.png)
 
 ## License
 

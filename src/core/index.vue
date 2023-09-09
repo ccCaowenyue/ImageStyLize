@@ -3,24 +3,23 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, nextTick } from 'vue';
-import { Stylize } from './index';
+import { onMounted, ref, nextTick } from "vue";
+import { Stylize } from "./index";
 
 const canvasContainerRef = ref<HTMLElement | null>(null);
 onMounted(() => {
   nextTick(() => {
     const stylize = new Stylize({
-      width: 800,
-      height: 800,
+      width: 400,
+      height: 400,
       container: canvasContainerRef.value,
     });
     stylize.draw({
-      type: 'texty',
+      type: "oil",
       data: {
-        url: '/src/assets/a.jpg',
-        text: '@#$%&*-=:. ',
-        orderly: false,
-        scale: 10,
+        url: "/src/assets/a.jpg",
+        radius: 4,
+        intensity: 255,
       },
     });
   });

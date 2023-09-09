@@ -3207,11 +3207,6 @@ strip-literal@^1.0.1:
   dependencies:
     acorn "^8.10.0"
 
-stylizetest@^0.0.1-alpha.0:
-  version "0.0.1-alpha.0"
-  resolved "https://registry.npmmirror.com/stylizetest/-/stylizetest-0.0.1-alpha.0.tgz#2fe816ad97935db1067606b460660ee463833cea"
-  integrity sha512-ShjhLcBgrImeo7U893IH/pW4FKbySFfp4L6vC9cMSEDsq5+S0R2up/nDBU2gkZ67xCgVnObeKtglWLpJyYos6Q==
-
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://registry.npmmirror.com/supports-color/-/supports-color-5.5.0.tgz"
