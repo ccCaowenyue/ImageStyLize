@@ -1,8 +1,13 @@
 import {
+  TComicConfig,
   TEffectType,
   TGaussianBlurConfig,
   TGrayScaleConfig,
   TLecaConfig,
+  TMixedConfig,
+  TNoiseConfig,
+  TRippleConfig,
+  TRmColorConfig,
   TSize,
   TTextyConfig,
 } from "../types/stylize";
@@ -12,6 +17,11 @@ import { LoadGrayscale } from "./grayscale";
 import { LoadLeca } from "./leca";
 import { LoadPixel } from "./pixel";
 import { LoadOilPainting } from "./oil";
+import { LoadMixed } from "./mixed";
+import { LoadRmColor } from "./rmColor";
+import { LoadComic } from "./comic";
+import { LoadRipple } from "./ripple";
+import { LoadNoise } from "./noise";
 
 export const EffectMap: Record<TEffectType, Function> = {
   blur: LoadGaussianBlur,
@@ -20,6 +30,11 @@ export const EffectMap: Record<TEffectType, Function> = {
   leca: LoadLeca,
   pixel: LoadPixel,
   oil: LoadOilPainting,
+  mixed: LoadMixed,
+  rmcolor: LoadRmColor,
+  comic: LoadComic,
+  ripple: LoadRipple,
+  noise: LoadNoise,
 };
 
 /**
@@ -29,7 +44,17 @@ export const EffectMap: Record<TEffectType, Function> = {
  */
 export const loadEffect = async (effect: {
   type: TEffectType;
-  data: (TGaussianBlurConfig | TTextyConfig | TGrayScaleConfig | TLecaConfig) &
+  data: (
+    | TGaussianBlurConfig
+    | TTextyConfig
+    | TGrayScaleConfig
+    | TLecaConfig
+    | TMixedConfig
+    | TRmColorConfig
+    | TComicConfig
+    | TRippleConfig
+    | TNoiseConfig
+  ) &
     TSize;
 }): Promise<HTMLCanvasElement | false> => {
   const type = effect.type;

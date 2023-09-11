@@ -4,7 +4,13 @@ export type TEffectType =
   | "grayscale"
   | "leca"
   | "pixel"
-  | "oil";
+  | "oil"
+  | "mixed"
+  | "rmcolor"
+  | "comic"
+  | "ripple"
+  | "noise";
+
 /** Canvas init params */
 export type TStylize = {
   width: number;
@@ -69,6 +75,48 @@ export type TOilPaintint = {
   intensity: number;
 };
 
+/** Mixed init params */
+export type TMixedConfig = {
+  /** image url */
+  url1: string;
+  /** image url */
+  url2: string;
+};
+
+/** RmColor init params */
+export type TRmColorConfig = {
+  /** image url */
+  url: string;
+  /** wait to replaced color(only accept hex color) */
+  color: string;
+  /** tolerance */
+  tolerance: number;
+};
+
+/** Comic init params */
+export type TComicConfig = {
+  /** image url */
+  url: string;
+};
+
+/** Ripple init params */
+export type TRippleConfig = {
+  /** image url */
+  url: string;
+  /** amplitude */
+  amplitude: number;
+  /** frequency */
+  frequency: number;
+};
+
+/** Noise init params */
+export type TNoiseConfig = {
+  /** image url */
+  url: string;
+  /** intensity */
+  intensity: number;
+};
+
 /** Effect init params */
 export type TEffectConfig = {
   type: TEffectType;
@@ -79,5 +127,10 @@ export type TEffectConfig = {
     | TGrayScaleConfig
     | TLecaConfig
     | TPixelConfig
-    | TOilPaintint;
+    | TOilPaintint
+    | TMixedConfig
+    | TRmColorConfig
+    | TComicConfig
+    | TRippleConfig
+    | TNoiseConfig;
 };

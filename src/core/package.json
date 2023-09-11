@@ -1,6 +1,6 @@
 {
   "name": "image-stylize",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.3",
   "description": "Image Stylize Library is a TypeScript library for image processing and filter effects.",
   "main": "index.ts",
   "scripts": {
